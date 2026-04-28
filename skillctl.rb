@@ -5,21 +5,21 @@
 class Skillctl < Formula
   desc "Pack, push, pull, and inspect AI agent skills as OCI images"
   homepage "https://github.com/redhat-et/skillimage"
-  version "0.3.0"
+  version "0.4.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/redhat-et/skillimage/releases/download/v0.3.0/skillctl_0.3.0_darwin_amd64.tar.gz"
-      sha256 "dc1d36018b8e4863e650a8e44120d5b13d3251ec30d87cde28d7f34189bf8e65"
+      url "https://github.com/redhat-et/skillimage/releases/download/v0.4.0/skillctl_0.4.0_darwin_amd64.tar.gz"
+      sha256 "f0d0c76da68c097f101e59bfb749bf1d932187bc1fb9b39a38c9cfc70c9552e0"
 
       define_method(:install) do
         bin.install "skillctl"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/redhat-et/skillimage/releases/download/v0.3.0/skillctl_0.3.0_darwin_arm64.tar.gz"
-      sha256 "4430fe1eb176061697167c8aaf01b55d0bc5724dfcec4f59f44db2ab6e78100d"
+      url "https://github.com/redhat-et/skillimage/releases/download/v0.4.0/skillctl_0.4.0_darwin_arm64.tar.gz"
+      sha256 "e39fe3131e43f59a1f41eacb852c7e5a0fe36a8dcec2b9f5fc0dcb334d6331b5"
 
       define_method(:install) do
         bin.install "skillctl"
@@ -29,15 +29,15 @@ class Skillctl < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/redhat-et/skillimage/releases/download/v0.3.0/skillctl_0.3.0_linux_amd64.tar.gz"
-      sha256 "455568600d4f350b8fa05b1f8a30e8a42c3a613a652f04e96f9f788b91c1f8eb"
+      url "https://github.com/redhat-et/skillimage/releases/download/v0.4.0/skillctl_0.4.0_linux_amd64.tar.gz"
+      sha256 "94b94a028a994188462325cb855d5c0e4d8b170442f822d9049f639542940a0c"
       define_method(:install) do
         bin.install "skillctl"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/redhat-et/skillimage/releases/download/v0.3.0/skillctl_0.3.0_linux_arm64.tar.gz"
-      sha256 "dbbc0b9bb997ba54314280614ada19728048cf315ec33998dfd1f7d886bc6b7b"
+      url "https://github.com/redhat-et/skillimage/releases/download/v0.4.0/skillctl_0.4.0_linux_arm64.tar.gz"
+      sha256 "7d2a932d128f2164e47c617596cbab211ca88c0149aefb38a52378d3da9e410a"
       define_method(:install) do
         bin.install "skillctl"
       end
