@@ -5,21 +5,21 @@
 class Docsclaw < Formula
   desc "Universal AI agent runtime with ConfigMap-driven personality"
   homepage "https://github.com/redhat-et/docsclaw"
-  version "0.15.1"
+  version "0.15.2"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/redhat-et/docsclaw/releases/download/v0.15.1/docsclaw_0.15.1_darwin_amd64.tar.gz"
-      sha256 "8bc6139609e7ada6cf533e5e7caaf75e569548552179cb2efa25eedb5aad3ab1"
+      url "https://github.com/redhat-et/docsclaw/releases/download/v0.15.2/docsclaw_0.15.2_darwin_amd64.tar.gz"
+      sha256 "fc9b2ed69347cf81858d3aaa00ad59e3062911074929d3860f1787ce3bda7c62"
 
       define_method(:install) do
         bin.install "docsclaw"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/redhat-et/docsclaw/releases/download/v0.15.1/docsclaw_0.15.1_darwin_arm64.tar.gz"
-      sha256 "92be6ba427ccd35fa8dd242cc9f1da4b7e43fcb0acf2c11b1acbb69ae5600743"
+      url "https://github.com/redhat-et/docsclaw/releases/download/v0.15.2/docsclaw_0.15.2_darwin_arm64.tar.gz"
+      sha256 "438909677867418da8afc66fe3a7d445a296bc34426a6ac0b8e487374ba47179"
 
       define_method(:install) do
         bin.install "docsclaw"
@@ -29,15 +29,15 @@ class Docsclaw < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/redhat-et/docsclaw/releases/download/v0.15.1/docsclaw_0.15.1_linux_amd64.tar.gz"
-      sha256 "03af683178ebb087ff889a8cb1ac6297674fc7dfe42b33d7255d5a1bb27cf114"
+      url "https://github.com/redhat-et/docsclaw/releases/download/v0.15.2/docsclaw_0.15.2_linux_amd64.tar.gz"
+      sha256 "5fe1d7bc24f42b45e913d56294024b2dfbccfbe884753a0c68432818f36a0590"
       define_method(:install) do
         bin.install "docsclaw"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/redhat-et/docsclaw/releases/download/v0.15.1/docsclaw_0.15.1_linux_arm64.tar.gz"
-      sha256 "05d5cd1defcc9a24521891e7cbba0b5398dfb920fe8c3219ccf5b557f0a5dded"
+      url "https://github.com/redhat-et/docsclaw/releases/download/v0.15.2/docsclaw_0.15.2_linux_arm64.tar.gz"
+      sha256 "3230869433c1512f3114062bb27a268295daf9f573f75b28cf538116433da494"
       define_method(:install) do
         bin.install "docsclaw"
       end
